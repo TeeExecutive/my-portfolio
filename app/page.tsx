@@ -8,11 +8,10 @@ export default function Page() {
       </h1>
       <p className="mb-4">
         {
-        `Hey, I’m a gameplay programmer who’s been messing around with Unreal Engine
-        and C++ for about a year now, trying to make cool gameplay stuff. I’m also
-        in school for computer science, learning the techy side of things.Before this,
-        I was in the Army for seven years, mostly doing logistics.Now, I’m just 
-        excited to code and create.`
+        `"Hey, I’m a gameplay programmer working with Unreal Engine and C++, creating awesome games and experiences.
+          I’m also currently studying computer science in school. Before this, I served in the Army for seven years, 
+          handling Religious Affairs and logistics. Now, I’m thrilled to code and build gameplay mechanics that I’ve 
+          always wanted to see in games. Instead of waiting for someone else to make them, I decided to do it myself!"`
         }
       </p>
       <div className="my-8">
