@@ -15,6 +15,7 @@ function ArrowIcon() {
   )
 }
 
+/*
 export default function Footer() {
   return (
     <footer className="mb-16">
@@ -59,3 +60,4 @@ export default function Footer() {
     </footer>
   )
 }
+*/
