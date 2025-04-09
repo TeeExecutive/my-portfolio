@@ -51,7 +51,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/dearo-thompson/"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Linkin</p>
+            <p className="ml-2 h-7">Linkedin</p>
           </a>
         </li>
       </ul>

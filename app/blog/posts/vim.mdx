@@ -19,3 +19,15 @@ Hey there! I’m super pumped to tell you about my latest project: a character c
 
 >#### Optimizing Performance
 * Performance improved through strategic draw call reduction and efficient mesh management.
+
+## <u> Step 1 Building the Basics </u>
+I created a new Customizable Object, which will serve as the blueprint for building my custom character.
+
+Next, I selected the Base Object node and changed the Object Name value to "Character", since this will represent my main character asset once everything is fully set up.
+
+For the Skeletal Mesh Component node, I assigned a mesh from my character. I made sure that this mesh includes all the skeleton bones required by any additional meshes I plan to add later. To keep everything consistent, I named this node the same as my base Customizable Object — "Character".
+
+Then, I set up a Mesh Section node. I applied a custom material to it, which displays colors on a grid (I'll go into more detail about this later). I connected the LOD 0 - Character - Mesh output pin from the Skeletal Mesh Component node to the input pin of the Mesh Section node.
+![](https://cdn.discordapp.com/attachments/1015661928372260924/1359453344279560213/image.png?ex=67f78916&is=67f63796&hm=56ac662125fe092f45f2243cec9de4818c4a06b81b4913d91f9b7e669712bd52&)
+
+## <u> Step 2: Define All Character Components </u>
