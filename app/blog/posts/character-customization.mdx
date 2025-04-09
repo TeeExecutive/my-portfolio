@@ -1,0 +1,36 @@
+---
+title: 'Character Customization Utilizing Mutable-Plugin'
+publishedAt: '2025-02-09'
+summary: 'Discover why Vim, with its steep learning curve, remains a beloved tool among developers for editing code efficiently and effectively.'
+---
+
+References: [Mutable Tutorial](https://dev.epicgames.com/community/learning/tutorials/yjw9/unreal-engine-mutable-tutorials)
+
+
+
+## <u>Why'd I do this?</u>
+
+#### 🚀 Way More Performance
+* Drastically reduced draw calls (1 material!)
+* Only 1 texture lookup. All needed textures are **merged**.
+* Only 1 SkeletalMeshComponent 🤯
+
+#### 💸 Saved Development Time
+* Code is **shared** between all body parts
+* Real-time preview of all modifications!
+
+## <u>What does it look like?</u>
+
+#### Full Overview 
+<Youtube id="bw_Q6oqhvbw" />
+
+## <u>What's the difference?</u>
+Before, we had over 150 draw calls spread across 20 SkeletalMeshComponents👎.
+![HighDraw](/images/HighDraw.png)
+
+And now?👀 Just 3 draw calls with ONE SkeletalMeshComponent! How awesome is that?! 😎 
+![LowDraw](/images/LowDraw.png)
+
+## <u>Conclusion</u>
+
+If you're still using the old method to create modular characters in Unreal Engine, you're seriously missing out! 🙌 Mutable is the future — don’t get left behind, gamer!

@@ -1,22 +1,47 @@
 import { BlogPosts } from 'app/components/posts'
 
 export default function Page() {
+
+  const resume = [
+    {
+      title: "Gameplay Programmer",
+      timespan: "November 2023 - Current",
+      tags: ["Unreal Engine", "C++", "Blueprint"],
+      description: "Working on a game project using Unreal Engine, C++, and Blueprint. Focusing on gameplay mechanics and systems.",
+    },
+    {
+      title: "U.S. Army",
+      timespan: "2017 - 2024",
+      tags: ["Religious Affairs Specialist", "Logistics"],
+      description: "Served in the Army for seven years, handling Religious Affairs and logistics.",
+    },
+  ]
+
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-      Tee Executive
-      </h1>
-      <p className="mb-4">
-        {
-        `"Hey, I’m a gameplay programmer working with Unreal Engine and C++, creating awesome games and experiences.
-          I’m also currently studying computer science in school. Before this, I served in the Army for seven years, 
-          handling Religious Affairs and logistics. Now, I’m thrilled to code and build gameplay mechanics that I’ve 
-          always wanted to see in games. Instead of waiting for someone else to make them, I decided to do it myself!"`
-        }
-      </p>
+      <h1 className="mb-2 text-4xl font-bold tracking-tighter">Tee Executive</h1>
+
+      <hr className="mb-6 w-[40%] text-neutral-800" />
+
+      {
+        resume.map((job, index) => (
+          <div key={index} className="mb-8">
+            <h4 className="mb-0 text-xl">{job.title}</h4>
+            <p className="text-xs mb-2 font-light text-neutral-200">{job.timespan}</p>
+            <p className="mb-2 hidden text-neutral-100">{job.description}</p>
+            <p className="text-xs mb-6 font-light text-neutral-200">{job.tags.join(', ')}</p>
+          </div>
+        ))
+      }
+
+      <hr className='w-[40%] text-neutral-800' />
+
+      <h4 className="mb-4 mt-8 text-2xl">Blog Posts</h4>
       <div className="my-8">
         <BlogPosts />
       </div>
+      <hr className='text-neutral-800' />
+
     </section>
   )
 }

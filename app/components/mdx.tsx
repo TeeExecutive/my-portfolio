@@ -66,6 +66,20 @@ function Youtube({ id }: { id: string}) {
   )
 }
 
+// Utility to extract text from React children
+function extractText(children) {
+  if (typeof children === 'string') {
+    return children;
+  }
+  if (Array.isArray(children)) {
+    return children.map(extractText).join('');
+  }
+  if (React.isValidElement(children)) {
+    return extractText((children.props as any).children);
+  }
+  return '';
+}
+
 function slugify(str) {
   return str
     .toString()
@@ -79,7 +93,8 @@ function slugify(str) {
 
 function createHeading(level) {
   const Heading = ({ children }) => {
-    let slug = slugify(children)
+    let textContent = extractText(children); // Extract plain text
+    let slug = slugify(textContent);
     return React.createElement(
       `h${level}`,
       { id: slug },
@@ -89,14 +104,14 @@ function createHeading(level) {
           key: `link-${slug}`,
           className: 'anchor',
         }),
-      ],
-      children
-    )
-  }
+        children, // Preserve original children for rendering
+      ]
+    );
+  };
 
-  Heading.displayName = `Heading${level}`
+  Heading.displayName = `Heading${level}`;
 
-  return Heading
+  return Heading;
 }
 
 let components = {
