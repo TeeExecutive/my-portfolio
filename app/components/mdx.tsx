@@ -53,6 +53,19 @@ function Code({ children, ...props }) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
+function Youtube({ id }) {
+  return (
+    <div>
+      <iframe
+        className="aspect-video w-full"
+        src={"https://www.youtube.com/embed/" + id}
+        title="YouTube Video Player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
+    </div>
+  )
+}
+
 function slugify(str) {
   return str
     .toString()
@@ -97,6 +110,7 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+  Youtube,
 }
 
 export function CustomMDX(props) {
