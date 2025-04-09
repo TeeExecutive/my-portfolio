@@ -53,12 +53,12 @@ function Code({ children, ...props }) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function Youtube({ id }) {
+function Youtube({ id }: { id: string}) {
   return (
     <div>
       <iframe
         className="aspect-video w-full"
-        src={"https://www.youtube.com/embed/" + id}
+        src={"https://www.youtube.com/embed/" + id + `?mute=1`}
         title="YouTube Video Player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       ></iframe>
