@@ -7,17 +7,19 @@ summary: 'Discover why Vim, with its steep learning curve, remains a beloved too
 
 Hey there! I’m super pumped to tell you about my latest project: a character customization system I’ve been working on in Unreal Engine, powered by the Mutable Plugin. Mutable’s honestly a game-changer—it lets me mess with Skeletal Meshes, Materials, and Textures on the fly, so players can tweak their characters however they want without the game grinding to a halt from clunky asset swaps.Hey, want the full scoop? I’m gonna walk you through exactly what I did to pull this off and why I went that route—let’s break it all down together!
 
+[![Optimizing Character Customization with Mutable Plugin](https://www.youtube.com/watch?v=bw_Q6oqhvbw)]
+
 ## <u> Key Components</u>
->#### Dynamically 
+#### Dynamically 
  * swap Skeletal Meshes – Players can modify body types, armor, and accessories without needing seperate models.
 
->#### Adjust Materials in real time 
+#### Adjust Materials in real time 
 * Instead of relying on pre-made material instances, Mutable lets me update colors, patterns, and effects instantly.
 
->#### Generate Textures at runtime
+#### Generate Textures at runtime
 * This eliminates the need for storing multiple variations, keeping everything optimized.
 
->#### Optimizing Performance
+#### Optimizing Performance
 * Performance improved through strategic draw call reduction and efficient mesh management.
 
 ## <u> Step 1 Building the Basics </u>
@@ -31,3 +33,4 @@ Then, I set up a Mesh Section node. I applied a custom material to it, which dis
 ![](https://cdn.discordapp.com/attachments/1015661928372260924/1359453344279560213/image.png?ex=67f78916&is=67f63796&hm=56ac662125fe092f45f2243cec9de4818c4a06b81b4913d91f9b7e669712bd52&)
 
 ## <u> Step 2: Define All Character Components </u>
+
