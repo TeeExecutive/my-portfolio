@@ -9,12 +9,14 @@ export default function Page() {
       tags: ["Unreal Engine", "C++", "Blueprint"],
       description: "Working on a game project using Unreal Engine, C++, and Blueprint. Focusing on gameplay mechanics and systems.",
     },
+    /*
     {
       title: "U.S. Army",
       timespan: "2017 - 2024",
       tags: ["Religious Affairs Specialist", "Logistics"],
       description: "Served in the Army for seven years, handling Religious Affairs and logistics.",
     },
+    */
   ]
 
   return (
