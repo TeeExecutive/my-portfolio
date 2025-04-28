@@ -1,55 +1,43 @@
 ---
-title: 'Thread Safe/Linked layered Interface Animations'
+title: 'Animation Player Movements'
 tag: 'Technical Animation'
 publishedAt: '2025-04-01'
 summary: ''
 ---
 
-References:
-<hr className='text-neutral-200' />
-### Optimizing Gameplay: Unleashing Peak Performance
-
-
-* **Parallel Processing on Worker Threads:**\
-Thread-safe functions, such as Blueprint Thread Safe Update Animation, lets animation logic run on separate CPU threads.
-
-* **Animation Fast Path Optimization:**\
-The Animation Fast Path speeds up games by directly copying animation settings instead of running slower Blueprint code. 
-
-* **Reduced Game Thread Load:**\
-By offloading animation updates to Worker Threads, the Game Thread is freed up to handle other critical tasks.
-
-* **Thread-Safe Property Access:**\
-Using Property Access nodes in thread-safe functions ensures safe, efficient data retrieval without risking data corruption across threads. 
-
-<br />
-<hr className="mb-6 w-[40%] text-neutral-200" />
-
-### Streamlined Development: Time-Saving Innovations
-
-
-* **Modular Development and Reusability:**\
-Layer Linked Interfaces allow developers to create self-contained animation layers that can be reused across multiple Animation Blueprints. This eliminates the need to duplicate logic for each character, saving significant setup time.
-
-
-* **Faster Iteration and Prototyping:**\
-Layers can be edited independently without modifying the main Animation Blueprint.
-
-
-* **Simplified Collaboration:**\
-In team environments, animators and programmers can work on different layers simultaneously.
-
-
-* **Reduced Blueprint Complexity:**\
-By breaking down complex Animation Blueprints into layers, the main AnimGraph becomes cleaner and easier to manage. Thread-safe functions within layers handle specific calculations.
-
-<hr className='text-neutral-200' />
+## <u>Why  this approach?</u>
+I chose this approach because it helps boost performance by moving animation logic to worker threads, freeing up the Game Thread for other tasks. Layered interfaces make animations modular and reusable, which speeds up development and makes collaboration easier. It keeps things clean, flexible, and efficient, especially for more complex projects.
 ## <u>Code Preview</u>
-
 <Youtube id="D269ewfmDhk" />
 <br />
-<hr className='text-neutral-200' />
-## <u>Conclusion</u>
 
-Adopt both methods to build animations that are fast, flexible, and easy to develop, especially for projects requiring complex character animations or team collaboration. Refer to Unreal’s Animation Optimization documentation and Lyra tutorials for practical guidance on implementation.
+### Optimizing Gameplay:
+I focus on optimizing gameplay by running animation logic on separate CPU threads, like using Blueprint Thread Safe Update Animation. This takes the load off the Game Thread, so it can handle other important tasks. The Animation Fast Path helps speed things up by copying animation settings directly, instead of using slower Blueprint code. By using thread safe property access, I make sure data is retrieved efficiently and safely across threads, preventing any corruption. This all comes together to make the game run smoother and faster.
+<br />
+
+
+### Streamlined Development:
+This approach makes development much smoother by allowing me to create reusable animation layers that can be used across multiple Animation Blueprints, cutting down on setup time. I can also iterate faster since I’m able to tweak layers independently without touching the main Blueprint.
+
+## <u>Conclusion</u>
+In the end, using thread-safe functions and modular layered interfaces helps me build animations that are faster, more flexible, and easier to develop. This approach not only optimizes performance but also streamlines collaboration and iteration, making it perfect for complex projects and team environments.<br />
+
+References:
+
+[Animation Optimization in Unreal Engine](https://dev.epicgames.com/documentation/en-us/unreal-engine/animation-optimization-in-unreal-engine?application_version=5.4)
+
+[How to Get Animation Variables in Animation Blueprints](https://dev.epicgames.com/documentation/en-us/unreal-engine/how-to-get-animation-variables-in-animation-blueprints-in-unreal-engine)
+
+[Graphing in Animation Blueprints](https://dev.epicgames.com/documentation/en-us/unreal-engine/graphing-in-animation-blueprints-in-unreal-engine)
+
+
+
+
+
+
+
+
+
+
+
 
