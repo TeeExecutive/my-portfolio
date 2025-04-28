@@ -1,58 +1,54 @@
 ---
 title: 'Thread Safe/Linked layered Interface Animations'
+tag: '2'
 publishedAt: '2025-04-01'
 summary: ''
 ---
 
 References:
-
-#### 🚀  Optimizing Gameplay: Unleashing Peak Performance
-
-
-* **Parallel Processing on Worker Threads:**
-
-    Thread-safe functions, such as Blueprint Thread Safe Update Animation, lets animation logic run on separate CPU threads.
-
-* **Animation Fast Path Optimization:**
-
-    The Animation Fast Path speeds up games by directly copying animation settings instead of running slower Blueprint code. 
-
-* **Reduced Game Thread Load:**
-
-    By offloading animation updates to Worker Threads, the Game Thread is freed up to handle other critical tasks.
-
-* **Thread-Safe Property Access:**
-
-    Using Property Access nodes in thread-safe functions ensures safe, efficient data retrieval without risking data corruption across threads. 
+<hr className='text-neutral-200' />
+### 🚀  Optimizing Gameplay: Unleashing Peak Performance
 
 
+* **Parallel Processing on Worker Threads:**\
+Thread-safe functions, such as Blueprint Thread Safe Update Animation, lets animation logic run on separate CPU threads.
 
-#### 💸 Streamlined Development: Time-Saving Innovations
+* **Animation Fast Path Optimization:**\
+The Animation Fast Path speeds up games by directly copying animation settings instead of running slower Blueprint code. 
+
+* **Reduced Game Thread Load:**\
+By offloading animation updates to Worker Threads, the Game Thread is freed up to handle other critical tasks.
+
+* **Thread-Safe Property Access:**\
+Using Property Access nodes in thread-safe functions ensures safe, efficient data retrieval without risking data corruption across threads. 
+
+<br />
+<hr className="mb-6 w-[40%] text-neutral-200" />
+
+### 💸 Streamlined Development: Time-Saving Innovations
 
 
-* **Modular Development and Reusability:**
-
-    Layer Linked Interfaces allow developers to create self-contained animation layers that can be reused across multiple Animation Blueprints. This eliminates the need to duplicate logic for each character, saving significant setup time.
-
-
-* **Faster Iteration and Prototyping:**
-
-    Layers can be edited independently without modifying the main Animation Blueprint.
+* **Modular Development and Reusability:**\
+Layer Linked Interfaces allow developers to create self-contained animation layers that can be reused across multiple Animation Blueprints. This eliminates the need to duplicate logic for each character, saving significant setup time.
 
 
-* **Simplified Collaboration:**
+* **Faster Iteration and Prototyping:**\
+Layers can be edited independently without modifying the main Animation Blueprint.
 
-    In team environments, animators and programmers can work on different layers simultaneously.
+
+* **Simplified Collaboration:**\
+In team environments, animators and programmers can work on different layers simultaneously.
 
 
-* **Reduced Blueprint Complexity:**
+* **Reduced Blueprint Complexity:**\
+By breaking down complex Animation Blueprints into layers, the main AnimGraph becomes cleaner and easier to manage. Thread-safe functions within layers handle specific calculations.
 
-    By breaking down complex Animation Blueprints into layers, the main AnimGraph becomes cleaner and easier to manage. Thread-safe functions within layers handle specific calculations.
-
+<hr className='text-neutral-200' />
 ## <u>Code Preview</u>
 
 <Youtube id="D269ewfmDhk" />
-
+<br />
+<hr className='text-neutral-200' />
 ## <u>Conclusion</u>
 
 Adopt both methods to build animations that are fast, flexible, and easy to develop, especially for projects requiring complex character animations or team collaboration. Refer to Unreal’s Animation Optimization documentation and Lyra tutorials for practical guidance on implementation.

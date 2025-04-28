@@ -36,13 +36,26 @@ export default function Page() {
         ))
       }
 
-      <hr className='w-[40%] text-neutral-800' />
+<hr className='text-neutral-200' />
 
-      <h4 className="mb-4 mt-8 text-2xl">Blog Posts</h4>
+      <h4 className="mb-4 mt-8 text-3xl">Projects</h4>
       <div className="my-8">
+      
+      <h4 className="mb-4 mt-8 text-xl">Gameplay Mechanics</h4>
+      <hr className='w-[40%] text-neutral-600' />
+      <br />
+
+      <h4 className="mb-4 mt-8 text-xl">Animations</h4>
+      <hr className='w-[40%] text-neutral-600' />
+      <br />
+
+      <h4 className="mb-4 mt-8 text-xl">Utilized Plugins</h4>
+      <hr className='w-[40%] text-neutral-600' />
+      <br />
+
         <BlogPosts />
       </div>
-      <hr className='text-neutral-800' />
+      <hr className='text-neutral-200' />
 
     </section>
   )

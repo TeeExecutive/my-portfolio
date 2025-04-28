@@ -1,49 +1,45 @@
 ---
 title: 'Character Customization Utilizing Mutable-Plugin'
+tag: '3'
 publishedAt: '2024-05-07'
 summary: ''
 ---
 
 References: [Mutable Tutorial](https://dev.epicgames.com/community/learning/tutorials/yjw9/unreal-engine-mutable-tutorials)
 
-
+<hr className='text-neutral-200' />
 
 ## <u>Why  this approach?</u>
 The Mutable plugin in Unreal Engine 5.5 simplifies creating dynamic, customizable content like characters, weapons, and vehicles. Key benefits include:
 
 
-#### 🚀 Optimizing Gameplay: Unleashing Peak Performance
-- **Mesh Merging and Section Reduction:**
+### 🚀 Optimizing Gameplay: Unleashing Peak Performance
+- **Mesh Merging and Section Reduction:**\
+Merges multiple mesh sections into a single skeletal mesh, reducing draw calls and improving rendering performance.(Only 1 SkeletalMeshComponent 🤯)
 
-    Merges multiple mesh sections into a single skeletal mesh, reducing draw calls and improving rendering performance.(Only 1 SkeletalMeshComponent 🤯)
+- **Material and Texture Efficiency:**\
+Optimizes material usage by combining textures and shaders for customized assets.(Drastically reduced draw calls 1 material!)
+<br />
+<hr className="mb-6 w-[40%] text-neutral-200" />
 
-- **Material and Texture Efficiency:** 
+### 💸 Streamlined Development: Time-Saving Innovations
 
-    Optimizes material usage by combining textures and shaders for customized assets.(Drastically reduced draw calls 1 material!)
+- **Runtime Customization:**\
+Real-time customization in-game with dynamic mesh and material generation.
 
-<hr className="mb-6 w-[40%] text-neutral-800" />
+- **Reduced Z-Fighting and Artifacts:\
+Handles mesh layering and clipping automatically.
 
-#### 💸 Streamlined Development: Time-Saving Innovations
+- **Procedural Deformation and Fitting:**\
+The plugin enables procedural mesh deformation, adapting clothing or accessories to various body shapes or slots.
 
-- **Runtime Customization:**
-
-    Real-time customization in-game with dynamic mesh and material generation.
-
-- **Reduced Z-Fighting and Artifacts:**
-
-    Handles mesh layering and clipping automatically.
-
-- **Procedural Deformation and Fitting:**
-
-    The plugin enables procedural mesh deformation, adapting clothing or accessories to various body shapes or slots.
-
-<hr className='text-neutral-800' />
+<hr className='text-neutral-200' />
 
 ## <u>Code Preview</u>
 
 <Youtube id="bw_Q6oqhvbw" />
-
-<hr className='text-neutral-800' />
+<br />
+<hr className='text-neutral-200' />
 
 ## <u>Key Differences</u>
 Before, there were over 150 draw calls spread across 20 SkeletalMeshComponents👎.
@@ -53,7 +49,8 @@ Before, there were over 150 draw calls spread across 20 SkeletalMeshComponents�
 Now? 👀 Just 3 draw calls using a single SkeletalMeshComponent. Pretty awesome, right?!😎  
 
 ![LowDraw](/images/LowDraw.png)
-<hr className='text-neutral-800' />
+<br />
+<hr className='text-neutral-200' />
 
 ## <u>Conclusion</u>
 
