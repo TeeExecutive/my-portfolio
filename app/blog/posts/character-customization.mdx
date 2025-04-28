@@ -1,31 +1,50 @@
 ---
 title: 'Character Customization Utilizing Mutable-Plugin'
 publishedAt: '2024-05-07'
-summary: 'Discover why Vim, with its steep learning curve, remains a beloved tool among developers for editing code efficiently and effectively.'
+summary: ''
 ---
 
 References: [Mutable Tutorial](https://dev.epicgames.com/community/learning/tutorials/yjw9/unreal-engine-mutable-tutorials)
 
 
 
-## <u>Why'd I do this?</u>
+## <u>Why  this approach?</u>
+The Mutable plugin in Unreal Engine 5.5 simplifies creating dynamic, customizable content like characters, weapons, and vehicles. Key benefits include:
+
 
 #### 🚀 Optimizing Gameplay: Unleashing Peak Performance
-* Drastically reduced draw calls (1 material!)
-* Only 1 texture lookup. All needed textures are **merged**.
-* Only 1 SkeletalMeshComponent 🤯
+* **Mesh Merging and Section Reduction:**
+
+    Merges multiple mesh sections into a single skeletal mesh, reducing draw calls and improving rendering performance.(Only 1 SkeletalMeshComponent 🤯)
+
+* **Material and Texture Efficiency:** 
+
+    Optimizes material usage by combining textures and shaders for customized assets.(Drastically reduced draw calls 1 material!)
+
+
 
 #### 💸 Streamlined Development: Time-Saving Innovations
-* Code is **shared** between all body parts
-* Real-time preview of all modifications!
 
-## <u>What does it look like?</u>
+* **Runtime Customization:**
+
+    Real-time customization in-game with dynamic mesh and material generation.
+
+* **Reduced Z-Fighting and Artifacts:**
+
+    Handles mesh layering and clipping automatically.
+
+* **Procedural Deformation and Fitting:**
+
+    The plugin enables procedural mesh deformation, adapting clothing or accessories to various body shapes or slots.
+
+
 
 #### Full Overview 
+
+## <u>Code Preview</u>
 <Youtube id="bw_Q6oqhvbw" />
 
-
-## <u>What's the difference?</u>
+## <u>Key Difference</u>
 Before, we had over 150 draw calls spread across 20 SkeletalMeshComponents👎.
 
 ![HighDraw](/images/HighDraw.png)
@@ -36,4 +55,4 @@ And now?👀 Just 3 draw calls with ONE SkeletalMeshComponent! How awesome is th
 
 ## <u>Conclusion</u>
 
-If you're still using the old method to create modular characters in Unreal Engine, you're seriously missing out! 🙌 Mutable is the future — don’t get left behind, gamer!
+The Mutable plugin makes creating customizable game content faster and smoother. It saves time by letting developers easily mix and match parts without tons of extra work. It also keeps games running fast by using less memory and making visuals cleaner.like changing your character’s look in real-time, without slowing things down. It’s a big win for fun, personalized gaming experiences!
