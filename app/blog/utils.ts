@@ -1,12 +1,18 @@
 import fs from 'fs'
 import path from 'path'
 
-type Metadata = {
+export type Metadata = {
   title: string
   tag: string
   publishedAt: string
   summary: string
   image?: string
+}
+
+export type BlogPost = {
+  metadata: Metadata;
+  slug: string;
+  content: string;
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -50,7 +56,7 @@ function getMDXData(dir) {
   })
 }
 
-export function getBlogPosts() {
+export function getBlogPosts(): BlogPost[] {
   return getMDXData(path.join(process.cwd(), 'app', 'blog', 'posts'))
 }
 
