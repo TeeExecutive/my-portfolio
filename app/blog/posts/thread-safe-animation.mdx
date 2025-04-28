@@ -6,21 +6,21 @@ summary: ''
 ---
 
 ## <u>Why  this approach?</u>
-I chose this approach because it helps boost performance by moving animation logic to worker threads, freeing up the Game Thread for other tasks. Layered interfaces make animations modular and reusable, which speeds up development and makes collaboration easier. It keeps things clean, flexible, and efficient, especially for more complex projects.
-## <u>Code Preview</u>
+I focus on boosting performance by moving animation logic to worker threads, which frees up the Game Thread to handle other important tasks. This approach also uses layered interfaces to make animations modular and reusable, speeding up development and making collaboration easier. It’s a clean, flexible, and efficient solution, especially useful for more complex projects.
 <Youtube id="D269ewfmDhk" />
 <br />
 
 ### Optimizing Gameplay:
-I focus on optimizing gameplay by running animation logic on separate CPU threads, like using Blueprint Thread Safe Update Animation. This takes the load off the Game Thread, so it can handle other important tasks. The Animation Fast Path helps speed things up by copying animation settings directly, instead of using slower Blueprint code. By using thread safe property access, I make sure data is retrieved efficiently and safely across threads, preventing any corruption. This all comes together to make the game run smoother and faster.
-<br />
+I optimize gameplay by running animation logic on separate CPU threads, using features like Blueprint Thread Safe Update Animation. This reduces the load on the Game Thread, allowing it to focus on other processes. I also use the Animation Fast Path to speed up performance by copying animation settings directly, instead of relying on slower Blueprint code. By utilizing thread safe property access, I ensure data is retrieved safely across threads, preventing any issues with data corruption. This all comes together to make the game smoother and faster.
 
+![HighDraw](/images/threads.png)
 
 ### Streamlined Development:
-This approach makes development much smoother by allowing me to create reusable animation layers that can be used across multiple Animation Blueprints, cutting down on setup time. I can also iterate faster since I’m able to tweak layers independently without touching the main Blueprint.
+This approach allows me to create reusable animation layers that can be used across multiple Animation Blueprints, cutting down on setup time. It also speeds up iteration, as I can tweak layers independently without needing to modify the main Blueprint.
 
+![HighDraw](/images/layerA.png)
 ## <u>Conclusion</u>
-In the end, using thread-safe functions and modular layered interfaces helps me build animations that are faster, more flexible, and easier to develop. This approach not only optimizes performance but also streamlines collaboration and iteration, making it perfect for complex projects and team environments.<br />
+Using thread safe functions and modular animation layers helps me build faster, more flexible animations that are easier to develop. This approach not only improves performance but also streamlines collaboration and iteration ideal for complex projects and team environments.
 
 References:
 
