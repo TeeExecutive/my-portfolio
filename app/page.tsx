@@ -21,9 +21,8 @@ export default function Page() {
 
   return (
     <section>
-      <h1 className="mb-2 text-4xl font-bold tracking-tighter">Tee Executive</h1>
+      <h1 className="mb-2 text-4xl font-bold tracking-tighter">Dearo Thompson</h1>
 
-      <hr className="mb-6 w-[40%] text-neutral-800" />
 
       {
         resume.map((job, index) => (
@@ -36,21 +35,12 @@ export default function Page() {
         ))
       }
 
-<hr className='text-neutral-200' />
 
       <h4 className="mb-4 mt-8 text-3xl">Projects</h4>
       <div className="my-8">
       
-      {/* <h4 className="mb-4 mt-8 text-xl">Gameplay Mechanics</h4>
-      <hr className='w-[40%] text-neutral-600' />
-      <br />
-
-      <h4 className="mb-4 mt-8 text-xl">Animations</h4>
-      <hr className='w-[40%] text-neutral-600' />
-      <br /> */}
         <BlogPosts />
       </div>
-      <hr className='text-neutral-200' />
 
     </section>
   )
